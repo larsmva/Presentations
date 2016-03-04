@@ -1,0 +1,118 @@
+Mesh Extraction from freesurfer can be viewed as either partial or complete extraction ? 
+
+
+I will talk about 2 methods for mesh extraction, one brainder, the other is my method.
+The general yiest of mesh extraction is to obtain a surface file in Freesurfer.
+Thus we will briefly look at different types of files in Freesurfer.
+
+-	.mgh or .mgz , .mgh is a volume file and is pixel based.
+
+
+-       curvature
+
+
+-       TIFF 
+
+
+
+-Inflated ? 
+
+-
+
+
+Brainder script can easily be dowloaded, and works as follows. Given a volume with labels, select the label or lables
+to be extracted then 
+
+The method is simple and do not involve many commands. But likewise it is not very high resolution to the mesh.
+
+
+Therefore I look at other methods, and basically I looked at surfaces genereated by Freesurfer.
+
+By looking at the ? pial ? we can see a very high resolution image.
+
+Therefore I wanted to obtain extract this surface file
+
+
+
+For this I saw some of the commmands 
+
+
+Problem, this method only gives the rigtht or left hemisphere/white matter. 
+
+So whats the difference between Brainder and this method.
+
+
+
+
+
+To obtain the mesh. Both ways are based on the commmand
+
+mris_convert 
+
+which transform a binary surface file to that of a asc.  This type a file can easily be read with as plain text __> seee
+
+However the format of this file is not implemented in Fenics mesh construction. ( yet)?
+
+
+Therefore we need to transform the file to a known implemented format. For MSHR these are Tentgen , off and stl.
+
+
+I wrote a set of scripts git - surface2mesh 
+ 
+And I will now talk about these scripts
+
+
+
+Note Gwak
+
+
+
+
+- Freesurfer general introduction
+	- Hi 
+
+	- I will today talk about mesh extraction from freesurfer, but first I will shortly talk about Freesurfer.
+
+	  Setting Freesurfer upp:
+		step 1 install
+		step 2 set upp enviorment
+			- I chose to set the enviorment upp in tcsh (turbo c shell ). This way it is seperate from
+			  my bash enviroment variabels.
+		step 3 test?
+
+
+
+		
+	  -Pipeline:
+		The pipleline of Freesurfer is based on fully a
+
+
+		-Segmentation 
+
+
+
+-Nibabel
+
+
+-Nipype
+ compatebility
+
+-Itk	
+-subjects
+	- Brainder
+	
+	- Own method
+	
+	- mesh Construction
+
+
+
+
+
+Alignement ? 
+
+
+
+
+To The Future 
+	- Longetudinal analysis
